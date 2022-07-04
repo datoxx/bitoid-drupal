@@ -1,0 +1,54 @@
+ <div class="max-w-smallmainwrapper lx:max-w-mainwrapper mx-auto">
+    {# form wraper#}
+    <div class="h-20 mt-8 pt-4 md:-mt-11 md:mb-11 bg-white rounded-md md:pl-6 md:pr-4 md:pt-4 lx:pl-8 lx:pt-4">
+      <form action="" method="post" class="grid grid-cols-1 md:grid-cols-3 md:gap-x-6">
+        <div class="flex justify-around items-center md:hidden">
+          <input class="w-[32%] text-base" type="text" name="title" placeholder="Filter by title">
+          <div class="flex justify-between items-center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.1076 1.50591e-06H0.860224C0.538187 -0.000593357 0.243138 0.175089 0.0960199 0.454871C-0.0531279 0.738422 -0.0269509 1.07987 0.163593 1.33883L6.84866 10.5411C6.85089 10.5443 6.85333 10.5473 6.85556 10.5504C7.09846 10.8709 7.22995 11.2591 7.23056 11.6579V19.1605C7.22914 19.3825 7.31842 19.5961 7.47853 19.7537C7.63884 19.9112 7.85677 20 8.08405 20C8.19951 19.9998 8.31396 19.9774 8.4207 19.934L12.1772 18.5345C12.5136 18.4339 12.7371 18.1236 12.7371 17.75V11.6579C12.7377 11.2591 12.8692 10.8709 13.1118 10.5504C13.1141 10.5473 13.1165 10.5443 13.1187 10.5411L19.804 1.33864C19.9946 1.07987 20.0207 0.73862 19.8716 0.45507C19.7247 0.175089 19.4294 -0.000593357 19.1076 1.50591e-06Z" fill="#6E8098"/>
+            </svg>            
+            <button class="w-12 h-12 bg-[#5964E0] text-md rounded-md text-white font-bold ml-6 p-auto" type="submit">
+              <svg class="mx-auto w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </button>
+           </div>
+        </div>
+        <div class="hidden md:flex border-r">
+          <svg class="mr-4 w-6 text-[#5964E0]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <input class="text-base font-normal focus:outline-none" type="text" name="title" placeholder="Filter by title, companies…">
+        </div>
+        <div class="hidden md:flex border-r">
+          <svg class="mr-4 w-6 text-[#5964E0]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          <input class="text-base font-normal focus:outline-none" type="text" name="location" placeholder="Filter by location…">
+        </div>
+        <div class="hidden md:flex justify-self-end items-center">
+          <input class="checked:bg-blue-500 mr-4 default:bg-blue-dark w-6 h-6" name="time" value="Full Time" type="checkbox" id="check" />
+          <label class="md:hidden lx:block font-bold mr-7" for="check">Full Time Only</label>
+          <label class="lx:hidden font-bold mr-7"  for="check">Full Time </label>
+          <button class="w-[123px] h-12 bg-[#5964E0] text-md rounded-md text-white font-bold p-auto" type="submit">Search</button>
+        </div>
+      </form>
+    </div>
+    {# job cards #}
+    <div class="grid grid-cols-1 md:grid-cols-3 lx:grid-cols-3  md:gap-x-5 lx:gap-x-6 gap-y-16">
+    {% for job in jobs %}
+    <a href="/node/{{ job.nid }}">
+      <div class="relative px-8 pt-12 pb-9  bg-white rounded-md">
+        <div class="absolute w-12 h-12 left-8 -top-6 rounded-[15px] bg-red-400 ">
+          <div class="relative h-12">
+            <img class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" src="{{ job.thumbnail }}" alt="image">
+          </div>
+        </div>
+        <div class="flex mb-4">
+          <span class="text-sm text-gray-dark">{{ job.time }}</span>
+          <span class="text-sm text-gray-dark mx-3">.</span>
+          <span class="text-sm text-gray-dark">{{ job.bool }}</span>
+        </div>
+        <h2 class="text-xl text-blue-dark font-bold mb-4">{{ job.position }}</h2> 
+        <p class="text-sm text-gray-dark mb-11">{{ job.title }}</p>
+        <span class="text-sm font-bold text-[#5964E0]">{{ job.country }}</span>
+      </div>
+    </a>
+    {% endfor %}
+    </div>
+</div>

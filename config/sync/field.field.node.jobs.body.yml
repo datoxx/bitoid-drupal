@@ -1,0 +1,23 @@
+uuid: fec8b01c-85a4-4423-b219-bbad103501af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.jobs
+  module:
+    - text
+id: node.jobs.body
+field_name: body
+entity_type: node
+bundle: jobs
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

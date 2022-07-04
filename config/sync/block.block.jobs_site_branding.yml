@@ -1,0 +1,25 @@
+uuid: 03475006-c7f8-4e59-b6da-4366d5a888d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - jobs
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: jobs_site_branding
+theme: jobs
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

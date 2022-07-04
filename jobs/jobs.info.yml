@@ -1,0 +1,4 @@
+name: jobs
+description: dev jobs list page module
+type: module
+core_version_requirement: ^8 || ^9

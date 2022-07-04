@@ -1,0 +1,25 @@
+uuid: c9c7a825-f5e4-49da-a23c-bb67c5f6526d
+langcode: en
+status: false
+dependencies:
+  module:
+    - jobs
+    - system
+  theme:
+    - retro
+id: formblock
+theme: retro
+region: content
+weight: -5
+provider: null
+plugin: form_block
+settings:
+  id: form_block
+  label: 'form block'
+  label_display: '0'
+  provider: jobs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /devjoblist

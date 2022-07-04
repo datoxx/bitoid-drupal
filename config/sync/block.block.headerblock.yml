@@ -1,0 +1,20 @@
+uuid: bc833f50-bc18-42f0-b682-01fba7d53f6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - jobs
+  theme:
+    - retro
+id: headerblock
+theme: retro
+region: header
+weight: 0
+provider: null
+plugin: header_block
+settings:
+  id: header_block
+  label: 'header block'
+  label_display: '0'
+  provider: jobs
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 06bcdc9b-4e2a-4674-bfbb-ed0b092f4de4
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - jobs
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: jobs_help
+theme: jobs
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

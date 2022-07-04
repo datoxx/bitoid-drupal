@@ -1,0 +1,22 @@
+uuid: 03e35fe9-0bea-4bd7-ae90-3f826ab3bd09
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - retro
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: retro_messages
+theme: retro
+region: header
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

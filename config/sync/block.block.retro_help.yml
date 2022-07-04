@@ -1,0 +1,22 @@
+uuid: c90337f0-4da2-4de9-937d-641a010dd1d3
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - retro
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: retro_help
+theme: retro
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

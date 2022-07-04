@@ -1,0 +1,22 @@
+uuid: 0a246da0-2b3e-4bc5-879f-c085c2eadc4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - jobs
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: jobs_content
+theme: jobs
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

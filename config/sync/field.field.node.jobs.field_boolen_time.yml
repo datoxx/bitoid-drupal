@@ -1,0 +1,21 @@
+uuid: 3a4d7c4c-a882-4454-8331-8f49ff0f4205
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_boolen_time
+    - node.type.jobs
+id: node.jobs.field_boolen_time
+field_name: field_boolen_time
+entity_type: node
+bundle: jobs
+label: 'boolen time'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Full Time'
+default_value_callback: ''
+settings: {  }
+field_type: string

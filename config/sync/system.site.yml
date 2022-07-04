@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 796b1792-7e02-4fd2-8827-110440ec9021
+name: 'first Drupal site'
+mail: dato.ardzenadze.2000@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /devjoblist
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

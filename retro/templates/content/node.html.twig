@@ -1,0 +1,150 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ */
+#}
+
+ <div class="relative lg:max-w-[730px] lg:mx-auto h-52 mt-14 pt-4 bg-white rounded-md md:grid md:grid-cols-4 md:h-[140px] md:-mt-12 md:mb-12 md:pt-0">
+            <div class="absolute w-12 h-12 left-[50%] translate-x-[-50%] -top-6 rounded-[15px] bg-[#E54D25] md:hidden">
+                    {{ content.field_company_image}}
+                {# <img class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" src="{{content.field_company_image}}" alt="image"> #}
+            </div>
+            <h2 class="text-center text-xl  text-blue-dark font-bold mt-7 mb-3 md:hidden">{{ content.field_company}}</h2>
+            <p class="text-center text-sm  text-gray-dark mb-11 md:hidden">companySite.com</p>
+            <button class="absolute w-[9.5rem] top-[61%] left-[50%] translate-x-[-50%] px-5 py-4 bg-gray-100 text-base rounded-md font-bold text-[#5964E0 ] md:hidden">Company Site</button>
+            <div class="hidden md:block md:relative md:h-full md:max-w-[140px] md:bg-orange-400 ">
+              {# <img class="absolute w-[40%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" src="{{ content.field_company_image}}" alt="image"> #}
+                  {{ content.field_company_image}}
+            </div>
+            <div class="hidden md:block col-span-2"> 
+              <h2 class="text-left text-xl  text-blue-dark font-bold mt-7 mb-3">{{ content.field_company}}</h2>
+              <p class="text-left text-sm  text-gray-dark mb-11">companySite.com</p>
+            </div>
+            <div class="hidden md:block self-center">
+              <button class="w-[9.5rem]  px-5 py-4 bg-gray-100 text-base rounded-md font-bold text-[#5964E0]">Company Site</button>
+            </div>
+  </div>
+
+
+<main class="mt-30 mb-16">
+    <div class="max-w-smallmainwrapper bg-white lg:max-w-[730px] mx-auto py-10">
+      <div class="mx-6 md:flex justify-between items-center ">
+        <div>
+          <div class="flex mb-3">
+            <span class="text-sm text-gray-dark">{{ content.field_work_time}}</span>
+            <span class="text-sm text-gray-dark mx-3">.</span>
+            <span class="text-sm text-gray-dark">{{ content.field_boolen_time}}</span>
+          </div>
+          <h2 class="text-xl text-blue-dark font-bold mb-3">{{ content.field_position}}</h2>
+          <span class="text-sm font-bold text-[#5964E0]">{{ content.field_country}}</span>
+        </div>
+          <button class="w-[100%]  h-12 mt-14 px-12 py-auto bg-[#5964E0] text-md rounded-md text-white font-bold md:px-7 md:w-[9rem] md:my-auto " type="submit">Apply Now</button>
+      </div>
+      <article class="mt-10 mx-6">
+        <p class="mx-6 text-[#6E8098] tracking-wide  text-base">
+        {{content.field_description}}
+        </p>
+
+        <h2 class="text-lg font-bold mb-7 mt-10 ">Requirements</h2>
+        <p class="text-[#6E8098] tracking-wide  text-base">
+           {{ content.body }}
+        </p>
+        <ul class="list-disc marker:text-[#5964E0] ml-6 mr-1 mt-8 text-[#6E8098] tracking-wide  text-base">
+          <li class="pl-8 mb-2">Morbi interdum mollis sapien. Sed</li>
+          <li class="pl-8  mb-2">Phasellus lacinia magna a ullamcorper laoreet, lectus arcu pulvinar risus</li>
+          <li class="pl-8 mb-2">Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus.</li>
+          <li class="pl-8 ">Morbi interdum mollis sapien. Sed</li>
+        </ul>
+     </article>
+     <article class="mt-10 mx-6">
+      <h2 class="text-lg font-bold mb-7">What You Will Do</h2>
+      <p class="text-[#6E8098] tracking-wide  text-base">
+          {{ content.body }}
+      </p>
+      <ol class="list-decimal marker:text-[#5964E0] marker:font-bold  ml-6 mr-1 mt-8 text-[#6E8098] tracking-wide  text-base">
+        <li class="pl-8 mb-2">Morbi interdum mollis sapien. Sed</li>
+        <li class="pl-8  mb-2">Phasellus lacinia magna a ullamcorper laoreet, lectus arcu pulvinar risus</li>
+        <li class="pl-8 mb-2">Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus.</li>
+        <li class="pl-8 ">Morbi interdum mollis sapien. Sed</li>
+      </ol>
+   </article>
+    </div>
+  </main>
+
+  <footer class="py-8 mx-auto md:px-10 md:py-8 bg-white">
+    <div class="hidden  md:flex justify-between items-center lg:max-w-[730px] mx-auto ">
+      <div>
+        <h1 class="text-[#19202D] text-xl font-bold">{{ content.field_position}}</h1>
+        <p class="text-[#6E8098] text-base">So Digital Inc.</p>
+      </div>
+      <button class="h-12 mt-14 px-12 py-auto bg-[#5964E0] text-md rounded-md text-white font-bold md:px-7 md:w-[9rem] md:my-auto " type="submit">Apply Now</button>
+    </div>
+    <button class="block w-[87%] h-12 mx-auto bg-[#5964E0] text-md rounded-md text-white font-bold  p-auto md:hidden" type="submit">Apply Now</button>
+  </footer>
+
+  {# {{ content.field_company_image}} #}
+

@@ -1,0 +1,19 @@
+uuid: 6a960759-6b9b-4c36-9d54-abcd56e91fe5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_time
+    - node.type.jobs
+id: node.jobs.field_work_time
+field_name: field_work_time
+entity_type: node
+bundle: jobs
+label: 'work time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,13 @@
+name: retro
+type: theme
+base theme: stable
+description: 'A great retro theme for warm summer days.'
+package: Custom
+core_version_requirement: ^8 || ^9
+libraries:
+  - retro/retro
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'

@@ -1,0 +1,22 @@
+uuid: 98b385a6-c4d7-41d9-a47a-eb2687fcdc76
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - retro
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: retro_content
+theme: retro
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

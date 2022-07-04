@@ -1,0 +1,23 @@
+uuid: 0bdcf757-8ce1-4bd1-be5b-416688d5f346
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - jobs
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: jobs_syndicate
+theme: jobs
+region: sidebar_first
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

@@ -1,0 +1,24 @@
+<?php
+
+function jobs_theme($existing, $type, $theme, $path) {
+
+    return [
+      'jobs_list' => [
+        'variables' => [
+          'jobs' => [],
+        ],
+      ],
+
+      'form_block' => [
+        'variables' => [
+          'form' => NULL,
+        ],
+      ],
+
+      'header_block' => [
+        'variables' => [
+          'null' => NULL,
+        ],
+      ],
+    ];
+}

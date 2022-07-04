@@ -1,0 +1,21 @@
+uuid: ad8e1b46-fa8d-4b99-b64b-26a0e426f9c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.job_position
+  module:
+    - text
+id: taxonomy_term.job_position.default
+targetEntityType: taxonomy_term
+bundle: job_position
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
